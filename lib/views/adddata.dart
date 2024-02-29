@@ -70,7 +70,10 @@ class _adddataState extends State<adddata> {
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly
                     ],
-                    decoration: InputDecoration(label: Text('เลขบัตร')),
+                    decoration: InputDecoration(
+                      label: Text('เลขบัตร'),
+                      counterText: "",
+                    ),
                   ),
                   TextField(
                     controller: name,
@@ -83,7 +86,10 @@ class _adddataState extends State<adddata> {
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly
                     ],
-                    decoration: InputDecoration(label: Text('เบอร์โทร')),
+                    decoration: InputDecoration(
+                      label: Text('เบอร์โทร'),
+                      counterText: "",
+                    ),
                   ),
                 ],
               )),
@@ -110,6 +116,10 @@ class _adddataState extends State<adddata> {
                         isExpanded: true,
                         hint: Text("เลือกจังหวัด"),
                         icon: Icon(Icons.arrow_drop_down),
+                        underline: Container(
+                          height: 1.2,
+                          color: Colors.grey,
+                        ),
                         elevation: 1,
                         items: personCon.province.map((item) {
                           return DropdownMenuItem(
@@ -131,7 +141,10 @@ class _adddataState extends State<adddata> {
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly
                     ],
-                    decoration: InputDecoration(label: Text('รหัสไปรษณีย์')),
+                    decoration: InputDecoration(
+                      label: Text('รหัสไปรษณีย์'),
+                      counterText: "",
+                    ),
                   ),
                 ],
               )),
