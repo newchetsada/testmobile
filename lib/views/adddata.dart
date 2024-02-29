@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:testmobile/controllers/controllers.dart';
 
@@ -64,6 +65,11 @@ class _adddataState extends State<adddata> {
                 children: [
                   TextField(
                     controller: citizen,
+                    maxLength: 13,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     decoration: InputDecoration(label: Text('เลขบัตร')),
                   ),
                   TextField(
@@ -72,6 +78,11 @@ class _adddataState extends State<adddata> {
                   ),
                   TextField(
                     controller: tel,
+                    maxLength: 10,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     decoration: InputDecoration(label: Text('เบอร์โทร')),
                   ),
                 ],
@@ -115,6 +126,11 @@ class _adddataState extends State<adddata> {
                       )),
                   TextField(
                     controller: post,
+                    maxLength: 5,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     decoration: InputDecoration(label: Text('รหัสไปรษณีย์')),
                   ),
                 ],
